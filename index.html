@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Portafolio, Ingeniero, Modelado3D, Fotografía, RV, Programación">
     <title>Portafolio Gustavo Bustamante</title>
-	<link rel="icon" type="image/png" href="img/favicon.png">
-    <style>
-        /*  Colores */
+    <link rel="icon" type="image/png" href="img/favicon.png">
+  <style>
+        /* Colores */
         :root {
-            --verde-manzana: #8DB600;
-            --verde-bandera: #006847;
+            --verde-manzana: #05DF72;
             --azul: #002447;        
             --naranja: #FF8C00;     
             --azul-prog: #87CEEB;      
@@ -38,7 +38,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
+            background-color: var(--verde-manzana);
             border-bottom: 1px solid #333;
             z-index: 1000;
         }
@@ -53,7 +53,7 @@
         }
 
         nav ul li a {
-            color: #fff;
+            color: #000; 
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem; 
@@ -62,7 +62,7 @@
         }
 
         nav ul li a:hover {
-            color: var(--verde-manzana);
+            color: #fff;
         }
 
         /* Menú */
@@ -76,7 +76,7 @@
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #222;
+            background-color: var(--verde-manzana);
             min-width: 160px;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
             border-radius: 5px;
@@ -84,31 +84,32 @@
         }
 
         .dropdown-content a {
-            color: white;
+            color: #000;
             padding: 12px 16px;
             display: block;
             text-align: center;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .dropdown-content a:hover {
-            background-color: var(--azul);
+            background-color: #000;
+            color: var(--verde-manzana);
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-		
-		
-		
-		
-        /* ¿QUIÉN SOY?  */
+        
+        
+        
+        
+        /* QUIÉN SOY  */
         #quien-soy {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(90deg, var(--verde-manzana) 0%, var(--verde-bandera) 15%, #000000 45%, #000000 100%);
+            background: #000;
             padding: 100px 8% 50px 8%;
         }
 
@@ -124,7 +125,7 @@
             max-width: 350px; 
             aspect-ratio: 1.4 / 2; 
             object-fit: cover;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+           
             background-color: rgba(0,0,0,0.3);
             border-radius: 4px;
         }
@@ -137,6 +138,7 @@
         .hero-der h1 {
             font-size: 3.5rem;
             margin-bottom: 5px;
+            color: var(--verde-manzana);
         }
 
         .hero-der h2 {
@@ -150,17 +152,16 @@
             font-size: 1.1rem;
             line-height: 1.7;
             color: #eee;
+            text-align: justify;
         }
-		
-		
-		
-		
-		
-		/* HERRAMIENTASsss */
-        #herramientas {
-            background-color: #111; 
-            padding: 80px 8%;
-            border-bottom: 1px solid #333;
+        
+        
+        
+        
+        /* HERRAMIENTASsss */
+       #herramientas {
+            background-color: #000; 
+            padding: 60px 8%;
         }
 
         .titulo-centro {
@@ -233,37 +234,47 @@
             width: 45px;
             height: 45px;
         }
-		
-		
-		
+        
+        
+        
 
         /* MODELADO 3D */
         #modelado-3d {
-            background-color: var(--azul);
-            padding: 100px 8%;
-            min-height: 100vh;
+            background-color: #000;
+            padding: 60px 8%;
         }
 
         .titulo-izq {
             text-align: left;
             font-size: 3rem;
             text-transform: uppercase;
-            border-bottom: 2px solid rgba(255,255,255,0.2);
-            padding-bottom: 15px;
+            border-top: 2px solid; 
+            border-bottom: 2px solid; 
+            padding-top: 15px; 
+            padding-bottom: 15px; 
             margin-bottom: 40px;
+        }
+        
+
+        #modelado-3d .titulo-izq {
+            color: var(--verde-manzana);
+            border-color: var(--verde-manzana);
         }
 
         .subtitulo-izq {
             text-align: left;
             font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--naranja); 
         }
 
-       
-		
-		
-		
+        #modelado-3d .subtitulo-izq {
+            color: var(--verde-manzana);
+        }
+
+        
+        
+        
+        
         #hard-surface, #organico {
             scroll-margin-top: 100px;
         }
@@ -274,6 +285,7 @@
             color: #eee;
             margin-bottom: 40px;
             max-width: 100%;
+            text-align: justify;
         }
 
         /* Grid para Hard Surface */
@@ -281,14 +293,15 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
 
-        .item-3d {
+       .item-3d {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(0,0,0,0.4);
+            background-color: #1a1a1a; 
+            border: 1px solid #333; 
             padding: 15px;
             border-radius: 8px;
         }
@@ -301,7 +314,7 @@
         }
 
         
-		
+        
         .img-clickable {
             width: 100%;
             object-fit: cover;
@@ -321,13 +334,11 @@
         }
 
 
-        .contenedor-organico {
+       .contenedor-organico {
             display: flex;
             flex-wrap: wrap; 
-            border-radius: 10px;
-            overflow: hidden; 
-            box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-            margin-bottom: 40px;
+            gap: 30px; 
+            margin-bottom: 20px;
         }
 
         .columna-maya, .columna-zbrush {
@@ -339,20 +350,33 @@
             text-align: center;
         }
 
-        .columna-maya {
-            background-color: #38A4BA;
-            color: #000;
+       .columna-maya {
+            background-color: #1a1a1a; 
+            border: 1px solid #333;
+            border-radius: 10px; 
+            color: #fff; 
         }
+        
 
-        .columna-zbrush {
-            background-color: #000;
+       .columna-zbrush {
+            background-color: #1a1a1a; 
+            border: 1px solid #333; 
+            border-radius: 10px; 
             color: #fff;
         }
 
-        .columna-maya h3, .columna-zbrush h3 {
+        .columna-maya h3 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             text-transform: uppercase;
+            color: #38A4BA; 
+        }
+
+        .columna-zbrush h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--naranja); 
         }
 
         .desc-organico {
@@ -360,24 +384,22 @@
             line-height: 1.5;
             margin-bottom: 25px;
             max-width: 450px;
+            text-align: justify;
         }
 
         .img-organico {
             width: 100%;
             max-width: 400px;
-            aspect-ratio: 1/1; 
+            aspect-ratio: 16/9; 
             margin-bottom: 25px;
             border: 2px solid rgba(255,255,255,0.1);
         }
-
-        .columna-maya .img-organico {
-            border-color: rgba(0,0,0,0.2); 
-        }
-		
+        
+        
         /* FIN ESTRUCTURA ORGÁNICO  */
 
-		
-		
+        
+        
         .link-detalle {
             position: relative;
             cursor: pointer;
@@ -390,16 +412,16 @@
             transition: transform 0.2s, filter 0.2s; 
         }
 
+        .icono-click.icono-ajuste {
+            width: 45px; 
+        }        
+
         .icono-click:hover {
             transform: scale(1.1);
             filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.6)); 
         }
-
-
-        .columna-maya .icono-click:hover {
-            filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.4)); 
-        }
-
+        
+        
         .link-detalle::after {
             content: attr(title);
             position: absolute;
@@ -437,7 +459,7 @@
         }
 
         .modal-content {
-            max-width: 90%;
+            max-width: 80%;
             max-height: 90vh;
             object-fit: contain;
             box-shadow: 0 0 30px rgba(0,0,0,0.8);
@@ -455,34 +477,40 @@
         }
 
         .cerrar-modal:hover {
-            color: var(--naranja);
+            color: var(--verde-manzana);
         }
-		
-		
-		
+        
+        
+        
 
         /* REALIDAD AUMENTADaaa  */
         #realidad-aumentada { 
-            background-color: var(--naranja); 
-            padding: 100px 8%;
-            min-height: 100vh;
+            background-color: #000; 
+            padding: 60px 8%;
+        }
+
+        #realidad-aumentada .titulo-izq {
+            color: var(--naranja);
+            border-color: var(--naranja);
         }
 
         .grid-ra {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
 
-        .item-ra {
+       .item-ra {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(0,0,0,0.3);
+            background-color: #1a1a1a; 
+            border: 1px solid #333; 
             padding: 15px;
             border-radius: 8px;
         }
+        
 
         .titulo-proyecto-ra {
             font-size: 1.1rem;
@@ -502,7 +530,7 @@
         }
 
         .item-ra p {
-            text-align: center;
+            text-align: justify;
             font-size: 1rem;
             color: #ddd;
             margin-bottom: 15px;
@@ -526,15 +554,19 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-		
-		
-		
+        
+        
+        
        #programacion { 
-            background-color: var(--azul-prog); 
-            color: #000; 
-            padding: 100px 8%; 
-            min-height: 100vh;
+            background-color: #000; 
+            color: #fff; 
+            padding: 60px 8%; 
         } 
+
+        #programacion .titulo-izq {
+            color: var(--azul-prog);
+            border-color: var(--azul-prog);
+        }
         
         .contenedor-prog {
             display: flex;
@@ -545,7 +577,7 @@
 
         .columna-prog {
             flex: 1;
-            background-color: rgba(255,255,255,0.25); 
+            background-color: rgba(255,255,255,0.1); 
             padding: 50px 40px;
             border-radius: 10px;
             display: flex;
@@ -563,7 +595,7 @@
         .img-prog {
             width: 100%;
             max-width: 400px;
-            aspect-ratio: 1/1; 
+            aspect-ratio: 16/9; 
             object-fit: cover;
             margin-bottom: 25px;
             border: 2px solid rgba(0,0,0,0.2);
@@ -575,50 +607,60 @@
             line-height: 1.5;
             margin-bottom: 25px;
             max-width: 450px;
+            text-align: justify;
         }
-		
-		
-		
-		
-	#fotografia { 
-            background-color: var(--rojo-foto); 
-            padding: 100px 8%;
-            min-height: 100vh;
+        
+        
+        
+        
+    #fotografia { 
+            background-color: #000; 
+            padding: 60px 8%;
         }
 
-        /*  FOTOGRAFÍA */
+        #fotografia .titulo-izq {
+            color: var(--rojo-foto);
+            border-color: var(--rojo-foto);
+        }
+
+        /* FOTOGRAFÍA */
         .collage-fotos {
-            column-count: 5; /
+            column-count: 5; 
             column-gap: 15px;
             padding-top: 20px;
         }
 
-        .img-collage {
+            .img-collage {
             width: 100%;
             height: auto;
             margin-bottom: 15px; 
             border-radius: 6px;
             display: block; 
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 3px solid transparent; 
+
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
         }
 
-     
-        .img-collage:hover {
+            .img-collage:hover {
             transform: scale(1.04) translateY(-5px); 
             box-shadow: 0 15px 25px rgba(0,0,0,0.6);
             z-index: 10;
             position: relative; 
+            border-color: var(--rojo-foto); 
         }
-		
-		
-		
-		
-		
-		
-		#edicion-video { 
-            background-color: var(--morado); 
-            padding: 100px 8%;
-            min-height: 100vh;
+        
+        
+        
+        
+        
+        #edicion-video { 
+            background-color: #000; 
+            padding: 60px 8%;
+        }
+
+        #edicion-video .titulo-izq {
+            color: var(--morado);
+            border-color: var(--morado);
         }
 
         .grid-video {
@@ -628,11 +670,12 @@
             margin-top: 40px;
         }
 
-        .item-video {
+       .item-video {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(0,0,0,0.3);
+            background-color: #1a1a1a; /* Gris carbón */
+            border: 1px solid #333; /* Marquito sutil */
             padding: 15px;
             border-radius: 8px;
             text-align: center;
@@ -662,16 +705,17 @@
             margin-bottom: 15px;
             flex-grow: 1; 
         }
-		
-		
-		
-		
-        /*  FOOTER */
+        
+        
+        
+        
+        /* FOOTER */
         footer {
-            background-color: #111;
-            padding: 50px 20px;
+            background-color: var(--verde-manzana);
+            padding: 30px 20px;
             text-align: center;
             border-top: 1px solid #333;
+            color: #000;
         }
 
         .redes-sociales {
@@ -683,32 +727,145 @@
         }
 
         .info-texto {
-            color: #ddd;
+            color: #000;
             font-size: 1.1rem;
         }
 
         .btn-instagram {
-            color: #fff;
+            color: #000;
             text-decoration: none;
             padding: 10px 25px;
-            border: 1px solid #fff;
+            border: 1px solid #000;
             border-radius: 5px;
             transition: all 0.3s;
             font-weight: bold;
         }
 
         .btn-instagram:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: #000;
+            color: var(--verde-manzana);
         }
 
-        /*  Adaptativo */
+        .btn-nav {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 20px; 
+            margin-top: -45px;
+            color: white;
+            font-weight: bold;
+            font-size: 70px; 
+            transition: 0.3s ease;
+            user-select: none;
+            display: none; 
+            z-index: 2001;
+        }
+        .btn-nav.izq { left: 40px; } 
+        .btn-nav.der { right: 40px; }
+        .btn-nav:hover { 
+            color: #05DF72; 
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 10px; 
+        }
+        
+        
+        /* ESTILOS POSTPRODUCCIÓN */
+       #postproduccion { scroll-margin-top: 100px; }
+        
+        .contenedor-post-nuevo {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 30px; 
+            margin-bottom: 20px;
+            align-items: flex-start; 
+        }
+
+        .tarjeta-post {
+            flex: 1; 
+            min-width: 300px;
+            background-color: #1a1a1a; 
+            border: 1px solid #333; 
+            border-radius: 10px; 
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tarjeta-post h3 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .titulo-texturizado { color: #ED0505; }
+        .titulo-rigging { color: #0300E3; }
+
+        
+        .img-16-9 {
+            width: 100%;
+            aspect-ratio: 16/9; 
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .desc-post-nueva {
+            font-size: 1rem;
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .sub-seccion-rigging {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    
+        .tarjeta-post.rigging-tarjeta {
+            flex: 2; 
+        }
+
+      
+        .contenedor-rigging-interno {
+            display: flex;
+            width: 100%;
+            gap: 30px;
+        }
+
+     
+        .sub-seccion-rigging {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hover-video { transition: transform 0.2s, box-shadow 0.2s; cursor: pointer;}
+        .hover-video:hover { transform: scale(1.03); box-shadow: 0 0 15px rgba(255,255,255,0.2); }
+
+
+        
+       /* Adaptativo */
         @media (max-width: 1000px) {
             #quien-soy {
                 flex-direction: column;
-                background: linear-gradient(180deg, var(--verde-manzana) 0%, var(--verde-bandera) 15%, #000000 40%, #000000 100%);
+                background: #000;
                 text-align: center;
                 padding-top: 140px;
+            }
+            
+            
+            .contenedor-post-nuevo,
+            .contenedor-rigging-interno {
+                flex-direction: column;
             }
 
             .hero-der {
@@ -739,34 +896,31 @@
                 flex-direction: column;
             }
 
-			
+            
             .contenedor-prog {
                 flex-direction: column;
-				
-				
+                
+                
             }
             .redes-sociales {
                 flex-direction: column;
                 gap: 15px;
             }
-			
-			
+            
+            
             .collage-fotos {
                 column-count: 4; 
             }
-			
-			
-		
+            
+            
+        
             .grid-video {
                 grid-template-columns: 1fr; 
             }
-			
-			
-			
         }
     </style>
 </head>
-	
+    
 <body>
 
     <header>
@@ -778,6 +932,7 @@
                     <div class="dropdown-content">
                         <a href="#hard-surface">Hard Surface</a>
                         <a href="#organico">Orgánico</a>
+                        <a href="#postproduccion">Postproducción 3D</a>
                     </div>
                 </li>
                 <li><a href="#realidad-aumentada">Realidad Aumentada</a></li>
@@ -788,25 +943,25 @@
         </nav>
     </header><br>
 
-	
-	
+    
+    
 
 
     <section id="quien-soy">
         <div class="hero-izq">
-            <img src="img/perfil2.jpg" alt="Gustavo Bustamante" class="foto-perfil">
+            <img src="img/perfil4.png" alt="Gustavo Bustamante" class="foto-perfil">
         </div>
         <div class="hero-der">
-            <center>
+            <div style="text-align: center;">
                 <h1>Gustavo Bustamante</h1>
                 <h2>Ingeniero en Comunicación Multimedia</h2>
-            </center>
+            </div>
             <p>
                 Soy una persona curiosa, resiliente y comprometida con el aprendizaje constante. Disfruto enfrentar nuevos retos y dar lo mejor de mí en cada proyecto, entendiendo que los errores son una oportunidad para crecer y mejorar. Mi pasión por los atardeceres, la naturaleza, el cielo y la música influye en mi creatividad y en la forma en que observo el mundo.<br><br>
 
                 Profesionalmente, me interesa el modelado 3D de objetos y personajes orgánicos, así como la fotografía, áreas que me permiten combinar creatividad y atención al detalle. También disfruto la programación y las tecnologías digitales, ya que complementan mi perfil y me motivan a seguir creando experiencias innovadoras visualmente e interactivas.<br><br>
-				
-				Me considero una persona confiable, responsable y analítica, con la capacidad de adaptarme a diferentes entornos de trabajo y afrontar desafíos de manera organizada. Disfruto colaborar en equipo, aportar ideas y mantener una comunicación clara y efectiva para alcanzar objetivos en común. En cada proyecto busco dar lo mejor de mí, comprometiéndome con la calidad de los resultados y manteniendo una actitud proactiva orientada al aprendizaje y la mejora continua.
+                
+                Me considero una persona confiable, responsable y analítica, con la capacidad de adaptarme a diferentes entornos de trabajo y afrontar desafíos de manera organizada. Disfruto colaborar en equipo, aportar ideas y mantener una comunicación clara y efectiva para alcanzar objetivos en común. En cada proyecto busco dar lo mejor de mí, comprometiéndome con la calidad de los resultados y manteniendo una actitud proactiva orientada al aprendizaje y la mejora continua.
 
             </p>
         </div>
@@ -821,7 +976,6 @@
         
         <div class="contenedor-herr">
             
-            <!-- Bloque 3D y Motores -->
             <div class="caja-herr">
                 <h3>Modelado 3D y Motores</h3>
                 <div class="grid-iconos">
@@ -830,12 +984,11 @@
                     <img src="img/maya.png" alt="Maya" title="Autodesk Maya">
                     <img src="img/zb.jpg" alt="ZBrush" title="ZBrush">
                     <img src="img/unity.png" alt="Unity" title="Unity">
-					
+                    
                 </div>
             </div>
-			
+            
 
-            <!--  Edición -->
             <div class="caja-herr">
                 <h3>Edición y Diseño Visual</h3>
                 <div class="grid-iconos">
@@ -844,9 +997,8 @@
                     <img src="img/canva.webp" alt="Canva" title="Canva">
                 </div>
             </div>
-			
+            
 
-            <!--  Complementarios -->
             <div class="caja-herr">
                 <h3>Conocimientos Complementarios</h3>
                 <div class="grid-iconos iconos-pequenos">
@@ -854,19 +1006,19 @@
                     <img src="img/lightroom.png" alt="Lightroom" title="Adobe Lightroom">
                     <img src="img/word.png" alt="Word" title="Microsoft Word">
                     <img src="img/excel.png" alt="Excel" title="Microsoft Excel">
-                    <img src="img/pp.png" alt="PowerPoint" title="Microsoft PowerPoint">
+                    <img src="img/dw.jpg" alt="PowerPoint" title="Microsoft PowerPoint">
                 </div>
             </div>
 
         </div>
     </section>
-	
+    
     
 
     <section id="modelado-3d">
         <h2 class="titulo-izq">Modelado 3D</h2>
-		
-		<p class="desc-seccion">Con experiencia en modelado Hard Surface mediante 3ds Max y modelado orgánico utilizando Maya, ambos pertenecientes a la suite de Autodesk. Además, cuento con conocimientos en escultura digital en ZBrush para la creación de personajes y modelos de alto nivel de detalle.</p> 
+        
+        <p class="desc-seccion">Con experiencia en modelado Hard Surface mediante 3ds Max y modelado orgánico utilizando Maya, ambos pertenecientes a la suite de Autodesk. Además, cuento con conocimientos en escultura digital en ZBrush para la creación de personajes y modelos de alto nivel de detalle.</p> 
 
         <h3 id="hard-surface" class="subtitulo-izq">Hard Surface</h3>
         
@@ -874,49 +1026,49 @@
         
         <div class="grid-hard">
             <div class="item-3d">
-                <img src="img/camar.jpg" data-hd="img/camar.jpg" alt="Hard Surface 1" class="img-clickable" loading="lazy">
+                <img src="com/camar.jpg" data-hd="img/camar.jpg" alt="Cama antigua" class="img-clickable" loading="lazy">
                 <p>Cama antigua con detalles de oxidación.</p> <br>
                 <a href="https://skfb.ly/pKNNx" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Ver detalle" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver detalle en Sketchfab" class="icono-click">
                 </a>
             </div>
             <div class="item-3d">
-                <img src="img/botesr.jpg" data-hd="img/botesr.jpg" alt="Hard Surface 2" class="img-clickable" loading="lazy">
+                <img src="com/botesr.jpg" data-hd="img/botesr.jpg" alt="Botes separadores de residuos" class="img-clickable" loading="lazy">
                 <p>Botes separadores de residuos: plástico, orgánico, inorgánico. </p><br>
                 <a href="https://skfb.ly/pKNOv" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Ver detalle" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver detalle en Sketchfab" class="icono-click">
                 </a>
             </div>
             <div class="item-3d">
-                <img src="img/restiradorr.jpg" data-hd="img/restiradorr.jpg" alt="Hard Surface 3" class="img-clickable" loading="lazy">
+                <img src="com/restiradorr.jpg" data-hd="img/restiradorr.jpg" alt="Restirador blanco" class="img-clickable" loading="lazy">
                 <p>Restirador blanco, con acabados en madera.</p><br>
                 <a href="https://skfb.ly/pKNPv" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Ver detalle" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver detalle en Sketchfab" class="icono-click">
                 </a>
             </div>
             <div class="item-3d">
-                <img src="img/sillaresr.jpg" data-hd="img/sillaresr.jpg" alt="Hard Surface 4" class="img-clickable" loading="lazy">
+                <img src="com/sillaresr.jpg" data-hd="img/sillaresr.jpg" alt="Silla para restirador" class="img-clickable" loading="lazy">
                 <p>Silla para restirador de plástico y aluminio.</p><br>
                 <a href="https://skfb.ly/pKNPM" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Ver detalle" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver detalle en Sketchfab" class="icono-click">
                 </a>
             </div>
             <div class="item-3d">
-                <img src="img/dispapelr.jpg" data-hd="img/dispapelr.jpg" alt="Hard Surface 5" class="img-clickable" loading="lazy">
+                <img src="com/dispapelr.jpg" data-hd="img/dispapelr.jpg" alt="Dispensador de papel higiénico" class="img-clickable" loading="lazy">
                 <p>Dispensador de papel higiénico .</p><br>
                 <a href="https://skfb.ly/pKNQB" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Ver detalle" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver detalle en Sketchfab" class="icono-click">
                 </a>
             </div>
             <div class="item-3d">
-                <img src="img/escritoriobr.jpg" data-hd="img/escritoriobr.jpg" alt="Hard Surface 6" class="img-clickable" loading="lazy">
+                <img src="com/escritoriobr.jpg" data-hd="img/escritoriobr.jpg" alt="Escritorio de escuela" class="img-clickable" loading="lazy">
                 <p>Escritorio de escuela.</p><br>
                 <a href="https://skfb.ly/pKNQ8" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Ver detalle" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver detalle en Sketchfab" class="icono-click">
                 </a>
             </div>
         </div>
-		
+        
 
         <h3 id="organico" class="subtitulo-izq">Orgánico</h3>
         
@@ -926,11 +1078,11 @@
                 <h3>MAYA</h3>
                 <p class="desc-organico">Se desarrolló el personaje Aang utilizando Autodesk Maya, software especializado en el modelado de personajes y formas orgánicas. El modelo fue construido con una topología low poly, optimizada para su uso en aplicaciones interactivas y entornos en tiempo real, manteniendo un equilibrio entre rendimiento y calidad visual.</p>
                 
-                <img src="img/angustias.jpg" data-hd="img/angustias.jpg" alt="Modelo Maya" class="img-clickable img-organico" loading="lazy">
+                <img src="com/angustias.jpg" data-hd="img/angustias.jpg" alt="Modelo de personaje Aang en Maya" class="img-clickable img-organico" loading="lazy">
                 
                 <p class="desc-organico">El cuerpo completo del personaje fue modelado desde cero, y a partir de la geometría base se realizaron procesos de extrusión para crear las distintas prendas y accesorios que conforman su vestimenta. Posteriormente, el modelo fue desplegado mediante UVs y texturizado en un software externo, lo que permitió una mayor libertad artística y un acabado visual más detallado y estilizado.</p>
                 <a href="https://skfb.ly/pKNVF" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Sketchfab" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver en Sketchfab" class="icono-click">
                 </a>
             </div>
 
@@ -938,27 +1090,73 @@
                 <h3>ZBrush</h3>
                 <p class="desc-organico">Este personaje fue desarrollado en ZBrush utilizando un flujo de trabajo orientado a escultura digital de alta resolución. Gracias a la gran densidad de polígonos que permite el software, fue posible trabajar con un alto nivel de detalle en elementos como la musculatura, la vestimenta y el cabello, logrando una apariencia más orgánica y realista.</p>
                 
-                <img src="img/kakashifake.jpg" data-hd="img/kakashifake.jpg" alt="Modelo Zbrush" class="img-clickable img-organico" loading="lazy">
+                <img src="com/kakashifake.jpg" data-hd="img/kakashifake.jpg" alt="Modelo de personaje en Zbrush" class="img-clickable img-organico" loading="lazy">
                 
-                <p class="desc-organico">Se emplearon diversas herramientas y pinceles de escultura para definir primero las formas principales del personaje y posteriormente refinar los detalles más complejos. Finalmente, el modelo fue texturizado dentro de ZBrush, complementando el trabajo de modelado y aportando mayor riqueza visual al resultado final.</p>
+                <p class="desc-organico">Se emplearon diversas herramientas y pinceles de escultura para definir primero las formas principales del personaje y posteriormente refinar los detalles más complejos. Finalmente, el modelo fue texturizado dentro de ZBrush, complementando el trabajo de modelado y aportando mayor riqueza visual al resultado final.</p><br>
                 <a href="#" target="_blank" title="Ver más a detalle" class="link-detalle">
-                    <img src="img/sketchfab.png" alt="Sketchfab" class="icono-click">
+                    <img src="img/sketchfab.png" alt="Ver en Sketchfab" class="icono-click">
                 </a>
+            
+                </div>
+        </div>
+        
+        
+        
+        <h3 id="postproduccion" class="subtitulo-izq">Postproducción 3D</h3>
+        
+        <div class="contenedor-post-nuevo">
+            
+            <div class="tarjeta-post">
+                <h3 class="titulo-texturizado">Texturizado</h3>
+                
+                <img src="com/y1.PNG" data-galeria="img/y1.PNG,img/y2.PNG,img/y3.PNG" alt="Ejemplo de texturizado 3D" class="img-clickable img-16-9" loading="lazy">
+                
+                <p class="desc-post-nueva">Se realizó el mapeado UV del personaje para optimizar la distribución de las texturas. Posteriormente, el modelo fue exportado a un software de texturizado, donde se aplicaron los materiales y detalles visuales finales.</p><br>
+            </div>
+
+            
+            
+            <div class="tarjeta-post rigging-tarjeta">
+                <h3 class="titulo-rigging">Rigging</h3>
+
+                <div class="contenedor-rigging-interno">
+                    
+                    <div class="sub-seccion-rigging">
+                        <img src="com/r1.PNG" data-galeria="img/r2.PNG,img/r1.PNG,img/r3.PNG" alt="Ejemplo de Rigging en 3D" class="img-clickable img-16-9" loading="lazy">
+                        <p class="desc-post-nueva">Se realizó el texturizado del personaje y la creación de un sistema de rigging mediante controles, permitiendo manipular su estructura de forma eficiente para generar distintas poses y dotarlo de mayor expresividad y dinamismo.</p>
+                    </div>
+
+                    <div class="sub-seccion-rigging">
+                        <a href="https://youtu.be/FFT4rgFnBf4" target="_blank" style="width: 100%;">
+                            <img src="img/ara.png" alt="Video de animación rigging" class="img-16-9 hover-video" loading="lazy">
+                        </a>
+                        <p class="desc-post-nueva">Se realizó la asignación y ajuste de pesos del esqueleto para garantizar una deformación adecuada de la malla durante la animación. Se creó una secuencia de caminata y se generó un playblast para visualizar y exportar la animación en un video.</p>
+                        
+                        <a href="https://youtu.be/FFT4rgFnBf4" target="_blank" title="Ver animación" class="link-detalle">
+                            <img src="img/yutu.png" alt="Ver animación en YouTube" class="icono-click">
+                        </a>
+                    </div>
+
+                </div>
             </div>
 
         </div>
-    </section>
 
+    </section>
+  
     <div id="visorHD" class="modal">
         <span class="cerrar-modal">&times;</span>
-        <img class="modal-content" id="imagenFullHD" style="display: none;">
+        <span class="btn-nav izq" id="btnAnterior">&#10094;</span>
+        <img class="modal-content" id="imagenFullHD" style="display: none;" alt="Vista ampliada">
         <video class="modal-content" id="videoFullHD" style="display: none;" autoplay loop muted playsinline controls></video>
+        <span class="btn-nav der" id="btnSiguiente">&#10095;</span>
     </div>
     
     
     
     
-	
+    
+    
     
 
     <section id="realidad-aumentada">
@@ -968,135 +1166,136 @@
         <div class="grid-ra">
             <div class="item-ra">
                 <h4 class="titulo-proyecto-ra">Ofrenda "Por los que ya no estan"</h4>
-                <img src="img/ofrendap.png" data-hd="img/ofrendap.png" alt="Ofrenda" class="media-ra img-clickable" loading="lazy">
-                <p>Escena 3D desarrollada con Three.js, incluye navegación interactiva mediante el mouse para explorar el escenario desde diferentes perspectivas.</p>
+                <img src="com/ofrendap.png" data-hd="img/ofrendap.png" alt="Escena de ofrenda en realidad aumentada" class="media-ra img-clickable" loading="lazy">
+                <p><b>Trabajo colaborativo</b><br>Escena 3D desarrollada con Three.js, incluye navegación interactiva mediante el mouse para explorar el escenario desde diferentes perspectivas.</p>
                 <a href="https://ricardoglezcis.github.io/GCRRMNVBGEOfrenda/" target="_blank" title="Ver más" class="link-detalle">
-                    <img src="img/github2.png" alt="Link" class="icono-click">
+                    <img src="img/github2.png" alt="Ver código en Github" class="icono-click">
                 </a>
             </div>
             
             <div class="item-ra">
                 <h4 class="titulo-proyecto-ra">El Gran Comedor de Hogwarts</h4>
-                <img src="img/gcomedor.png" data-hd="img/gcomedor.png" alt="Filtro AR 2" class="media-ra img-clickable" loading="lazy">
-                <p>Escena 3D desarrollada con Three.js, algunos objetos reaccionan al pasar el cursor y pueden seleccionarse para acceder a diferentes vistas del escenario.</p>
-                <a href="https://tlalokan28.github.io/Examen-Gran-Comedor/" target="_blank" title="Probar filtro" class="link-detalle">
-                    <img src="img/github2.png" alt="Link" class="icono-click">
+                <img src="com/gcomedor.png" data-hd="img/gcomedor.png" alt="Escena 3D del Gran Comedor de Hogwarts" class="media-ra img-clickable" loading="lazy">
+                <p><b>Trabajo colaborativo</b><br>Escena 3D desarrollada con Three.js, algunos objetos reaccionan al pasar el cursor y pueden seleccionarse para acceder a diferentes vistas del escenario.</p>
+                <a href="https://tlalokan28.github.io/Examen-Gran-Comedor/" target="_blank" title="Ver El Gran Comedor" class="link-detalle">
+                    <img src="img/github2.png" alt="Ver proyecto en Github" class="icono-click">
                 </a>
             </div>
             
             <div class="item-ra">
                 <h4 class="titulo-proyecto-ra">Escanea el QR BEE - HONEY</h4>
-                <img src="img/raqr.png" data-hd="img/raqr.png" alt="Filtro AR 4" class="media-ra img-clickable" loading="lazy">
+                <img src="com/raqr.png" data-hd="img/raqr.png" alt="Proyecto de AR con código QR" class="media-ra img-clickable" loading="lazy">
                 <p>Tras escanear el código QR, un toque en la pantalla despliega el elemento de realidad aumentada. Al tocar nuevamente, se inicia la reproducción de música para enriquecer la experiencia.</p>
             </div>
             
             <div class="item-ra">
                 <h4 class="titulo-proyecto-ra">Volver unos años atrás en Varsovia </h4>
-                <img src="img/varsovia2.png" data-hd="img/varsovia2.png" alt="Filtro AR 3" class="media-ra img-clickable" loading="lazy">
-                <p>Proyecto desarrollado mediante el modelado de objetos en 3ds Max y su implementación en Unity. La experiencia está optimizada para visores de realidad virtual.</p>
+                <img src="com/varsovia2.png" data-hd="img/varsovia2.png" alt="Proyecto VR sobre Varsovia" class="media-ra img-clickable" loading="lazy">
+                <p><b>Trabajo colaborativo</b><br>Proyecto desarrollado mediante el modelado de objetos en 3ds Max y su implementación en Unity. La experiencia está optimizada para visores de realidad virtual.</p><br>
                 <a href="https://www.youtube.com/watch?v=p-OmUY5BZOs" target="_blank" title="Viajar a Varsovia" class="link-detalle">
-                    <img src="img/yutu.png" alt="Link" class="icono-click">
+                    <img src="img/yutu.png" alt="Ver video en YouTube" class="icono-click">
                 </a>
             </div>
             
             <div class="item-ra">
                 <h4 class="titulo-proyecto-ra">Recorrido por el Edificio C de la ICM</h4>
-                <img src="img/icm.png" data-hd="img/icm.png" alt="Nuevo Proyecto" class="media-ra img-clickable" loading="lazy">
-                <p>Recorrido inmersivo del Edificio C de Ingeniería en Comunicación Multimedia de la UNEVE. El entorno fue modelado y texturizado en 3ds Max, e implementado en Unity, buscando representar de forma fiel la estructura y apariencia del edificio real.</p>
+                <img src="com/icm.png" data-hd="img/icm.png" alt="Recorrido virtual del edificio C" class="media-ra img-clickable" loading="lazy">
+                <p><b>Trabajo colaborativo</b><br>Recorrido inmersivo del Edificio C de Ingeniería en Comunicación Multimedia de la UNEVE. El entorno fue modelado y texturizado en 3ds Max, e implementado en Unity, buscando representar de forma fiel la estructura y apariencia del edificio real.</p>
                 <a href="https://www.youtube.com/watch?v=ubiIlG-RpKk&t=76s" target="_blank" title="Ven a conocer el Edificio C" class="link-detalle">
-                    <img src="img/yutu.png" alt="Link" class="icono-click">
+                    <img src="img/yutu.png" alt="Ver recorrido en YouTube" class="icono-click">
                 </a>
             </div>
             
             <div class="item-ra">
                 <h4 class="titulo-proyecto-ra">Bill Cypher  de Gravity Falls</h4>
-                <img src="img/bill.png" data-hd="img/bill.png" alt="Nuevo Proyecto" class="media-ra img-clickable" loading="lazy">
-                <p>Proyecto desarrollado mediante programación utilizando la librería Three.js. La escena fue construida a partir de figuras geométricas básicas y la aplicación de transformaciones</p>
-				<a href="https://youtu.be/i3TKk8OyV7o" target="_blank" title="Ven más" class="link-detalle">
-                    <img src="img/yutu.png" alt="Link" class="icono-click">
+                <img src="com/bill.png" data-hd="img/bill.png" alt="Modelo de Bill Cypher programado en Three.js" class="media-ra img-clickable" loading="lazy">
+                <p>Proyecto desarrollado mediante programación utilizando la librería Three.js. La escena fue construida a partir de figuras geométricas básicas y la aplicación de transformaciones.</p><br><br>
+                <a href="https://youtu.be/i3TKk8OyV7o" target="_blank" title="Ven más" class="link-detalle">
+                    <img src="img/yutu.png" alt="Ver proyecto en YouTube" class="icono-click">
                 </a>
-				
+                
             </div>
         </div>
     </section>
-	
-	
-	
-	
-	
-	
-	<section id="programacion">
-        <h2 class="titulo-izq" style="color: #000; border-bottom: 2px solid rgba(0,0,0,0.2); text-shadow: none;">Programación</h2>
-        <p class="desc-seccion" style="color: #000;">La programación permite convertir ideas en experiencias digitales funcionales mediante el uso de diferentes lenguajes y tecnologías. A través de la lógica, la resolución de problemas y el desarrollo de código estructurado, es posible crear aplicaciones, videojuegos, herramientas interactivas y soluciones adaptadas a distintos entornos digitales.</p>
+    
+    
+    
+    
+    
+    
+    <section id="programacion">
+        <h2 class="titulo-izq">Programación</h2>
+        <p class="desc-seccion">La programación permite convertir ideas en experiencias digitales funcionales mediante el uso de diferentes lenguajes y tecnologías. A través de la lógica, la resolución de problemas y el desarrollo de código estructurado, es posible crear aplicaciones, videojuegos, herramientas interactivas y soluciones adaptadas a distintos entornos digitales.</p>
         
         <div class="contenedor-prog">
             <div class="columna-prog">
                 <h3>Proyecto Manhattan</h3>
-                <img src="img/proyectom.png" data-hd="img/proyectom.png" alt="Proyecto 1" class="img-clickable img-prog" loading="lazy">
-                <p class="desc-prog">Videojuego desarrollado utilizando la librería Three.js para la creación y renderizado de entornos 3D interactivos. El proyecto incorpora un sistema de colisiones que permite gestionar mecánicas de juego como la pérdida de vidas, la obtención de puntos y la interacción con distintos elementos del escenario.</p>
+                <img src="com/proyectom.png" data-hd="img/proyectom.png" alt="Videojuego Proyecto Manhattan en Three.js" class="img-clickable img-prog" loading="lazy">
+                <p class="desc-prog"><b>Trabajo colaborativo</b><br>Videojuego desarrollado utilizando la librería Three.js para la creación y renderizado de entornos 3D interactivos. El proyecto incorpora un sistema de colisiones que permite gestionar mecánicas de juego como la pérdida de vidas, la obtención de puntos y la interacción con distintos elementos del escenario.</p>
                 <a href="https://ricardoglezcis.github.io/proyecto-manhattan/" target="_blank" title="¡Vamos a jugar!" class="link-detalle">
-                    <img src="img/github2.png" alt="Link" class="icono-click">
+                    <img src="img/github2.png" alt="Repositorio Github" class="icono-click">
                 </a>
             </div>
 
             <div class="columna-prog">
                 <h3>Regalo y regala</h3>
-                <img src="img/regalo.png" data-hd="img/regalo.png" alt="Proyecto 2" class="img-clickable img-prog" loading="lazy">
-                <p class="desc-prog">Juego desarrollado en Processing utilizando Java, enfocado en mecánicas de movimiento, detección de colisiones y recolección de objetos. El objetivo principal consiste en desplazarse desde un punto de inicio hasta una meta establecida, evitando colisionar con las paredes del escenario, cualquier contacto reiniciar el juego.</p>
+                <img src="com/regalo.png" data-hd="img/regalo.png" alt="Juego Regalo y Regala en Processing" class="img-clickable img-prog" loading="lazy">
+                <p class="desc-prog"><b>Trabajo colaborativo</b><br>Juego desarrollado en Processing utilizando Java, enfocado en mecánicas de movimiento, detección de colisiones y recolección de objetos. El objetivo principal consiste en desplazarse desde un punto de inicio hasta una meta establecida, evitando colisionar con las paredes del escenario, cualquier contacto reiniciar el juego.</p>
                 <a href="https://youtu.be/4VgxHLAnBYc" target="_blank" title="Ver gameplay" class="link-detalle">
-                    <img src="img/yutu.png" alt="Link" class="icono-click">
+                    <img src="img/yutu.png" alt="Ver gameplay en YouTube" class="icono-click">
                 </a>
             </div>
         </div>
     </section>
-	
-	
-	
-	
-	
+    
+    
+    
+    
+    
 <section id="fotografia">
         <h2 class="titulo-izq">Fotografía</h2>
         <p class="desc-seccion">La fotografía, además de ser una de mis principales aficiones, representa una forma de expresión visual que me permite capturar y compartir mi manera de percibir el mundo. 
-			Ya sea mediante fotografía de paisaje, retrato o de producto, mi objetivo es crear imágenes que generen una conexión con el espectador y comuniquen una sensación, idea o experiencia. Considero que una buena fotografía no solo captura un momento, sino que también tiene la capacidad de provocar emociones.</p>
+            Ya sea mediante fotografía de paisaje, retrato o de producto, mi objetivo es crear imágenes que generen una conexión con el espectador y comuniquen una sensación, idea o experiencia. Considero que una buena fotografía no solo captura un momento, sino que también tiene la capacidad de provocar emociones.</p>
         
         <div class="collage-fotos">
-			<img src="img/1.JPG" data-hd="img/1.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/2.JPG" data-hd="img/2.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/3.JPG" data-hd="img/3.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/4.JPG" data-hd="img/4.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/5.JPG" data-hd="img/5.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/6.JPG" data-hd="img/6.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/7.JPG" data-hd="img/7.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/8.JPG" data-hd="img/8.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/9.JPG" data-hd="img/9.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/10.JPG" data-hd="img/10.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/11.JPG" data-hd="img/11.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/12.JPG" data-hd="img/12.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/13.JPG" data-hd="img/13.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/14.JPG" data-hd="img/14.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/15.JPG" data-hd="img/15.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/16.JPG" data-hd="img/16.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/17.JPG" data-hd="img/17.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/18.JPG" data-hd="img/18.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/19.JPG" data-hd="img/19.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/20.JPG" data-hd="img/20.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/21.JPG" data-hd="img/21.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/22.JPG" data-hd="img/22.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
+        
+			<img src="com/1.jpg" data-hd="img/1.jpg" alt="Monumento a la Revolución" class="img-clickable img-collage" loading="lazy">
+			<img src="com/2.jpg" data-hd="img/2.jpg" alt="Atardeser en el mar" class="img-clickable img-collage" loading="lazy">
+			<img src="com/3.jpg" data-hd="img/3.jpg" alt="Día de Muertos Una mirada" class="img-clickable img-collage" loading="lazy">
+			<img src="com/4.jpg" data-hd="img/4.jpg" alt="Día de Muertos La Elegancia" class="img-clickable img-collage" loading="lazy">
+			<img src="com/5.jpg" data-hd="img/5.jpg" alt="Cascada de Flores" class="img-clickable img-collage" loading="lazy">
+			<img src="com/6.jpg" data-hd="img/6.jpg" alt="Al Fondo" class="img-clickable img-collage" loading="lazy">
+			<img src="com/7.jpg" data-hd="img/7.jpg" alt="Las Palmeras" class="img-clickable img-collage" loading="lazy">
+			<img src="com/8.jpg" data-hd="img/8.jpg" alt="En la Sombra" class="img-clickable img-collage" loading="lazy">
+			<img src="com/9.jpg" data-hd="img/9.jpg" alt="Lujo" class="img-clickable img-collage" loading="lazy">
+			<img src="com/10.jpg" data-hd="img/10.jpg" alt="Café por la Tarde" class="img-clickable img-collage" loading="lazy">
+			<img src="com/11.jpg" data-hd="img/11.jpg" alt="Día de Muertos Tradición" class="img-clickable img-collage" loading="lazy">
+			<img src="com/12.jpg" data-hd="img/12.jpg" alt="Arco Natural" class="img-clickable img-collage" loading="lazy">
+			<img src="com/13.jpg" data-hd="img/13.jpg" alt="Reflejo Natural" class="img-clickable img-collage" loading="lazy">
+			<img src="com/14.jpg" data-hd="img/14.jpg" alt="Soda Italiana Mexicana" class="img-clickable img-collage" loading="lazy">
+			<img src="com/15.jpg" data-hd="img/15.jpg" alt="Día de Muertos Caminemos Juntos" class="img-clickable img-collage" loading="lazy">
+			<img src="com/16.jpg" data-hd="img/16.jpg" alt="Natural" class="img-clickable img-collage" loading="lazy">
+			<img src="com/17.jpg" data-hd="img/17.jpg" alt="La Icreible Naturalesa" class="img-clickable img-collage" loading="lazy">
+			<img src="com/18.jpg" data-hd="img/18.jpg" alt="Día de Muertos Protector" class="img-clickable img-collage" loading="lazy">
+			<img src="com/19.jpg" data-hd="img/19.jpg" alt="Vigilante" class="img-clickable img-collage" loading="lazy">
+			<img src="com/20.jpg" data-hd="img/20.jpg" alt="Opulencia" class="img-clickable img-collage" loading="lazy">
+			<img src="com/21.jpg" data-hd="img/21.jpg" alt="El Hogar del Profesional" class="img-clickable img-collage" loading="lazy">
+			<img src="com/22.jpg" data-hd="img/22.jpg" alt="Día de Muertos Entre Dos Tierras" class="img-clickable img-collage" loading="lazy">
 
-			<img src="img/24.JPG" data-hd="img/24.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">        
-			<img src="img/25.JPG" data-hd="img/25.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/26.JPG" data-hd="img/26.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/27.JPG" data-hd="img/27.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/28.JPG" data-hd="img/28.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
-			<img src="img/29.JPG" data-hd="img/29.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
+			<img src="com/24.jpg" data-hd="img/24.jpg" alt="Chocolate" class="img-clickable img-collage" loading="lazy">
+			<img src="com/25.jpg" data-hd="img/25.jpg" alt="Día de Muertos La Única Segura" class="img-clickable img-collage" loading="lazy">
+			<img src="com/26.jpg" data-hd="img/26.jpg" alt="Solo un Momento" class="img-clickable img-collage" loading="lazy">
+			<img src="com/27.jpg" data-hd="img/27.jpg" alt="México Mágico" class="img-clickable img-collage" loading="lazy">
+			<img src="com/28.jpg" data-hd="img/28.jpg" alt="La Esencia" class="img-clickable img-collage" loading="lazy">
+			<img src="com/29.jpg" data-hd="img/29.jpg" alt="Parte del Valle" class="img-clickable img-collage" loading="lazy">
 
-			<img src="img/23.JPG" data-hd="img/23.JPG" alt="Foto" class="img-clickable img-collage" loading="lazy">
+			<img src="com/23.jpg" data-hd="img/23.jpg" alt="Floreciendo" class="img-clickable img-collage" loading="lazy">
 
-	</div>
+    </div>
     </section>
-	
-	
-	
+    
+    
+    
 
     <section id="edicion-video">
         <h2 class="titulo-izq">Edición de Video</h2>
@@ -1105,31 +1304,31 @@
         <div class="grid-video">
             <div class="item-video">
                 <a href="https://www.tiktok.com/@uniconcatenados/video/7636526670916275477?is_from_webapp=1&sender_device=pc" target="_blank">
-                    <img src="img/mixue.jpg" alt="mixuev" class="img-video" loading="lazy">
+                    <img src="img/mixue.jpg" alt="Video editado Mixue" class="img-video" loading="lazy">
                 </a>
                 <p class="desc-video">Desarrollo de contenido dinámico para redes sociales en la plataforma de Tiktok.</p>
                 <a href="https://www.tiktok.com/@uniconcatenados/video/7636526670916275477?is_from_webapp=1&sender_device=pc" target="_blank" title="Ver en TikTok" class="link-detalle">
                     <img src="img/tkk.png" alt="Ver en TikTok" class="icono-click">
                 </a>
             </div>
-			
-			
+            
+            
 
             <div class="item-video">
                 <a href="https://www.tiktok.com/@uniconcatenados/video/7629769103569325333?is_from_webapp=1&sender_device=pc&web_id=7498591562772284934" target="_blank">
-                    <img src="img/juego.jpg" alt="juegors" class="img-video" loading="lazy">
+                    <img src="img/juego.jpg" alt="Video editado juego en Tiktok" class="img-video" loading="lazy">
                 </a>
                 <p class="desc-video">Desarrollo de contenido dinámico para redes sociales en la plataforma de Tiktok.</p>
                 <a href="https://www.tiktok.com/@uniconcatenados/video/7629769103569325333?is_from_webapp=1&sender_device=pc&web_id=7498591562772284934" target="_blank" title="Ver en TikTok" class="link-detalle">
                     <img src="img/tkk.png" alt="Ver en TikTok" class="icono-click">
                 </a>
             </div>
-			
+            
 
-			
+            
             <div class="item-video">
                 <a href="https://youtu.be/9WsVp8tI9Oo" target="_blank">
-                    <img src="img/ping.png" alt="La Finca del Gato" class="img-video" loading="lazy">
+                    <img src="img/ping.png" alt="Video La Finca del Gato" class="img-video" loading="lazy">
                 </a>
                 <p class="desc-video">Video informativo editado con una propuesta visual atractiva y dinámica.</p>
                 <a href="https://youtu.be/9WsVp8tI9Oo" target="_blank" title="Ver video" class="link-detalle">
@@ -1137,47 +1336,75 @@
                 </a>
             </div>
 
-			
-			
+            
+            
             <div class="item-video">
                 <a href="https://www.youtube.com/watch?v=yz5dNZEaN0M" target="_blank">
-                    <img src="img/dis.png" alt="Disenorama" class="img-video" loading="lazy">
+                    <img src="img/dis.png" alt="Video promocional Diseñorama" class="img-video" loading="lazy">
                 </a>
                 <p class="desc-video">Edición y animación de video promocional diseñado para generar expectativa.</p>
                 <a href="https://www.youtube.com/watch?v=yz5dNZEaN0M" target="_blank" title="Ver video" class="link-detalle">
                     <img src="img/yutu.png" alt="Ver en YouTube" class="icono-click">
                 </a>
             </div>
-			
-			
+            
+            
         </div>
     </section>
-	
-	
-	
-	
-	
+    
+    
+    
+    
+    
     <footer>
         <h3>Gustavo Bustamante</h3>
-        <p style="color: #aaa;">Ingeniero en Comunicación Multimedia</p>
+        <p style="color: #000;">Ingeniero en Comunicación Multimedia</p>
+        
         <div class="redes-sociales">
-            <span class="info-texto">gustavovazquez2803@gmail.com</span>
-            <a href="https://www.instagram.com/gustavo28_03/?hl=es" target="_blank" class="btn-instagram">Instagram</a>
-            <span class="info-texto">55-29-83-17-05</span>
+            
+            <a href="mailto:gustavovazquez2803@gmail.com" title="gustavovazquez2803@gmail.com" class="link-detalle">
+                <img src="img/gmail.png" alt="Enviar Correo" class="icono-click">
+            </a>
+            
+            
+            <a href="https://www.instagram.com/gustavo28_03/?hl=es" target="_blank" title="Instagram" class="link-detalle">
+                <img src="img/ins.webp" alt="Perfil de Instagram" class="icono-click icono-ajuste">
+            </a>
+            
+            
+            <a href="https://wa.me/525529831705" target="_blank" title="55-29-83-17-05" class="link-detalle">
+                <img src="img/ws.webp" alt="Contactar por WhatsApp" class="icono-click icono-ajuste">
+            </a>
         </div>
     </footer>
-
+    
+    
+    
     <script>
         const modal = document.getElementById("visorHD");
         const imagenHD = document.getElementById("imagenFullHD");
         const videoHD = document.getElementById("videoFullHD");
         const btnCerrar = document.getElementsByClassName("cerrar-modal")[0];
         const mediaClickeable = document.querySelectorAll(".img-clickable");
+        
+        
+        const btnAnterior = document.getElementById("btnAnterior");
+        const btnSiguiente = document.getElementById("btnSiguiente");
+        let galeriaActual = [];
+        let indiceActual = 0;
+
+        function actualizarImagenGaleria() {
+            imagenHD.src = galeriaActual[indiceActual];
+        }
 
         mediaClickeable.forEach(media => {
             media.onclick = function() {
                 modal.style.display = "flex"; 
                 
+                
+                galeriaActual = [];
+                btnAnterior.style.display = "none";
+                btnSiguiente.style.display = "none";
                 
                 if (this.tagName.toLowerCase() === 'video') {
                     imagenHD.style.display = "none";
@@ -1187,24 +1414,60 @@
                     videoHD.style.display = "none";
                     videoHD.src = ""; 
                     imagenHD.style.display = "block";
-                    imagenHD.src = this.getAttribute("data-hd"); 
+                    
+                  
+                    if(this.hasAttribute("data-galeria")) {
+                        galeriaActual = this.getAttribute("data-galeria").split(',');
+                        indiceActual = 0;
+                        actualizarImagenGaleria();
+                        
+                       
+                        if(galeriaActual.length > 1) {
+                            btnAnterior.style.display = "block";
+                            btnSiguiente.style.display = "block";
+                        }
+                    } else {
+                     
+                        imagenHD.src = this.getAttribute("data-hd"); 
+                    }
                 }
             }
         });
 
-        btnCerrar.onclick = function() {
+  
+        btnSiguiente.onclick = function(e) {
+            e.stopPropagation(); 
+            if (galeriaActual.length > 0) {
+                indiceActual = (indiceActual + 1) % galeriaActual.length;
+                actualizarImagenGaleria();
+            }
+        };
+
+        btnAnterior.onclick = function(e) {
+            e.stopPropagation();
+            if (galeriaActual.length > 0) {
+                indiceActual = (indiceActual - 1 + galeriaActual.length) % galeriaActual.length;
+                actualizarImagenGaleria();
+            }
+        };
+
+      
+        function cerrarModal() {
             modal.style.display = "none";
             imagenHD.src = ""; 
             videoHD.src = ""; 
+            galeriaActual = [];
         }
+
+        btnCerrar.onclick = cerrarModal;
 
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
-                imagenHD.src = "";
-                videoHD.src = ""; 
+                cerrarModal();
             }
         }
     </script>
+    
+    
 </body>
 </html>
